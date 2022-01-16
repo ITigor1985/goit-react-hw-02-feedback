@@ -1,10 +1,12 @@
+import { Title, SectionBlock } from "./Section.styled";
 
-const Section = ({title, children}) => {
-    return (
-    <section>
-    <h1>{title}</h1>
-    {children}
-    </section>)
-}
+const Section = ({ title, children }) => {
+  return (
+    <SectionBlock>
+      <Title>{title}</Title>
+      {children}
+    </SectionBlock>
+  );
+};
 
 export default Section;
