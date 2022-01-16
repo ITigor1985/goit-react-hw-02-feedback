@@ -2,6 +2,7 @@
   "name": "goit-react-hw-02-feedback",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ITigor1985.github.io/goit-react-hw-02-feedback",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -14,11 +15,16 @@
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.2"
   },
+  "overrides": {
+    "mini-css-extract-plugin": "2.4.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -30,6 +36,7 @@
     "eslint": "^8.6.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.7",
+    "mini-css-extract-plugin": "2.4.5",
     "prettier": "^2.5.1"
   },
   "browserslist": {
@@ -46,6 +53,6 @@
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,css,md}": "prettier --write"    
+    "*.{js,jsx,css,md}": "prettier --write"
   }
 }
